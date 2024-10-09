@@ -1,0 +1,260 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap");
+/*-------------------- CSS RESET ---------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+  --font-text: "Habibi", sans-serif;
+  --font-headings: "Irish Grover";
+  --color-green: #06a816;
+  --color-orange: #e75d02;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media (min-width: 428px) {
+  header,
+  nav,
+  main,
+  section,
+  figure,
+  .contact,
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  header {
+    align-items: center;
+    background-color: var(--color-green);
+    margin-top: 2px;
+    width: 100vw;
+  }
+
+  header h1 {
+    color: var(--color-white);
+    font-family: var(--font-headings);
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+  }
+
+  header p {
+    color: var(--color-white);
+    font-family: var(--font-text);
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+    width: 100vw;
+    padding: 0;
+  }
+  nav a {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    font-family: var(--font-text);
+    text-decoration: none;
+    width: 50vw;
+    padding: 10px 20px;
+    margin: 0;
+  }
+  nav ul {
+    padding: 10px;
+  }
+
+  nav li {
+    padding: 10px;
+  }
+  .top-button {
+    position: fixed;
+    align-items: center;
+    bottom: 10px;
+    right: 0px;
+    width: 10vw;
+    height: 7vh;
+    margin: 0;
+  }
+  ul {
+    list-style-type: none;
+  }
+  main {
+    width: 100vw;
+  }
+  section {
+    padding: 5px;
+  }
+  h2 {
+    color: var(--color-black);
+    font-family: var(--font-headings);
+    font-size: 1.75em;
+    padding: 5px;
+  }
+
+  p {
+    text-align: left;
+    color: var(--color-black);
+    font-family: var(--font-text);
+    margin: 5px;
+    padding: 5px;
+  }
+
+  main h3 {
+    text-align: center;
+    color: var(--color-black);
+    font-family: var(--font-headings);
+    font-size: 1.25em;
+  }
+  figure {
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+  }
+  figcaption {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--color-white);
+    font-family: var(--font-text);
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 25vw;
+    height: 5vh;
+  }
+  .contact {
+    align-items: center;
+    background-color: var(--color-green);
+    width: 100vw;
+    padding: 10px;
+  }
+  .contact h2 {
+    color: var(--color-white);
+    font-weight: 500;
+    font-family: var(--font-headings);
+    padding: 30px 0 12px 0;
+  }
+
+  .address {
+    align-items: center;
+    color: var(--color-white);
+    font-family: var(--font-text);
+    padding-bottom: 20px;
+  }
+  .contact a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+
+  .contact ul {
+    list-style-type: none;
+    color: var(--color-white);
+  }
+  .hours {
+    align-items: center;
+    color: var(--color-white);
+    font-family: var(--font-text);
+    padding-bottom: 10px;
+  }
+  footer {
+    align-items: center;
+    color: var(--color-green);
+    font-family: var(--font-text);
+    font-weight: 600;
+    width: 100vw;
+    padding-bottom: 10px;
+  }
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 834px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+      }
+      header h1 {
+        grid-column: 1 / 2; 
+        text-align: center;
+      }
+      header p {
+        grid-column: 1 / 2; 
+        text-align: center;
+      }
+      nav {
+        grid-column: 1 / 2;
+        justify-content: center;
+      }
+      nav ul {
+        grid-row: 2;
+      }
+      section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding: 10px;
+      }
+      section h2 {
+        text-align: left;
+      }
+      section p {
+        text-align: left;
+      }
+      section ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        gap: 20px;
+        padding: 10px;
+      }
+      figure {
+        justify-self: center;
+        align-self: center;
+      }
+      figcaption{
+        width: 10vw;
+      }
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+      }
+      .contact section {
+        align-self: start;
+      }
+      .address h2 {
+        text-align: center;
+      }
+      .address address {
+        text-align: center;
+      }
+      .hours h2 {
+        text-align: center;
+      }
+      .hours ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
